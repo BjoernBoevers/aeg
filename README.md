@@ -1,4 +1,4 @@
-# Aeg – erster Prototyp
+# Age – erster Prototyp
 
 Eine kleine, kindgerechte Lern-Web-App mit Demo-Chat, Lernhelfer, Fokus-Timer und Mutmachern. Sie arbeitet vollständig lokal und verwendet keine KI-API.
 

@@ -34,7 +34,7 @@ chatForm.addEventListener('submit', (event) => {
   if (!question) return;
   addMessage(question, 'user');
   chatInput.value = '';
-  window.setTimeout(() => addMessage(demoReply(question), 'aeg'), 350);
+  window.setTimeout(() => addMessage(demoReply(question), 'age'), 350);
 });
 
 const tips = {
