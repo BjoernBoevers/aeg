@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Aeg – dein freundlicher Lernbegleiter" />
+    <title>Aeg – Lernbegleiter</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="hero">
+        <div class="logo" role="img" aria-label="Aeg, ein lächelnder blauer Roboter">
+          <svg viewBox="0 0 120 120" aria-hidden="true">
+            <path d="M60 21V12" stroke="#3E61D9" stroke-width="7" stroke-linecap="round"/><circle cx="60" cy="9" r="7" fill="#FFCA62"/>
+            <path d="M27 52H18c-7 0-12 5-12 12s5 12 12 12h9m66-24h9c7 0 12 5 12 12s-5 12-12 12h-9" fill="#6388F5" stroke="#3556C9" stroke-width="5"/>
+            <rect x="23" y="24" width="74" height="76" rx="30" fill="#6388F5" stroke="#3556C9" stroke-width="5"/>
+            <rect x="35" y="40" width="50" height="44" rx="19" fill="#F3F8FF"/>
+            <ellipse cx="51" cy="59" rx="7" ry="9" fill="#263D88"/><ellipse cx="69" cy="59" rx="7" ry="9" fill="#263D88"/>
+            <circle cx="53" cy="56" r="2.5" fill="white"/><circle cx="71" cy="56" r="2.5" fill="white"/>
+            <path d="M48 70c4 9 20 9 24 0" fill="none" stroke="#263D88" stroke-width="4" stroke-linecap="round"/>
+            <circle cx="41" cy="70" r="4" fill="#FF9EA8" opacity=".7"/><circle cx="79" cy="70" r="4" fill="#FF9EA8" opacity=".7"/>
+          </svg>
+        </div>
+        <div>
+          <p class="eyebrow">Dein freundlicher Lernbegleiter</p>
+          <h1>Aeg</h1>
+        </div>
+        <div class="wave" aria-hidden="true">👋</div>
+      </header>
+
+      <section class="welcome card">
+        <div>
+          <h2>Hallo! Schön, dass du da bist.</h2>
+          <p>Ich bin Aeg. Wir können gemeinsam lernen, uns konzentrieren oder einfach einen kleinen Mutmacher finden.</p>
+        </div>
+        <div class="sparkles" aria-hidden="true">✨</div>
+      </section>
+
+      <section class="grid">
+        <article class="card chat-card">
+          <div class="section-heading">
+            <span class="icon blue">💬</span>
+            <div>
+              <h2>Frag Aeg</h2>
+              <p>Schreib deine Frage – ich erkläre sie einfach.</p>
+            </div>
+            <button id="toggleChatSize" class="expand-chat" type="button" aria-pressed="false" aria-label="Chatfenster vergrößern">
+              <span aria-hidden="true">⛶</span> Vergrößern
+            </button>
+          </div>
+          <div id="chatMessages" class="messages" aria-live="polite">
+            <div class="message aeg-message">Hallo! Wobei darf ich dir heute helfen? 😊</div>
+          </div>
+          <form id="chatForm" class="chat-form">
+            <label class="sr-only" for="chatInput">Deine Nachricht an Aeg</label>
+            <input id="chatInput" maxlength="240" autocomplete="off" placeholder="Zum Beispiel: Was ist 7 + 5?" />
+            <button type="submit">Senden <span aria-hidden="true">➜</span></button>
+          </form>
+        </article>
+
+        <article class="card learn-card">
+          <div class="section-heading">
+            <span class="icon orange">📚</span>
+            <div>
+              <h2>Lernhelfer</h2>
+              <p>Wähle ein Thema für einen kleinen Start.</p>
+            </div>
+          </div>
+          <div class="topic-buttons" role="group" aria-label="Lernthemen">
+            <button class="topic" data-topic="Mathe">🔢 Mathe</button>
+            <button class="topic" data-topic="Deutsch">✏️ Deutsch</button>
+            <button class="topic" data-topic="Englisch">🌍 Englisch</button>
+          </div>
+          <div id="learningTip" class="learning-tip">Wähle ein Thema. Dann bekommst du eine kleine Übung.</div>
+        </article>
+
+        <article class="card focus-card">
+          <div class="section-heading">
+            <span class="icon green">🎯</span>
+            <div>
+              <h2>Fokus-Zeit</h2>
+              <p>Eine ruhige Lernpause nur für dich.</p>
+            </div>
+          </div>
+          <div id="timer" class="timer" aria-live="polite">05:00</div>
+          <p id="timerMessage" class="timer-message">Bereit? Fünf Minuten schaffen wir gemeinsam.</p>
+          <div class="timer-actions">
+            <button id="startTimer" class="primary" type="button">Start</button>
+            <button id="resetTimer" class="secondary" type="button">Zurücksetzen</button>
+          </div>
+        </article>
+      </section>
+
+      <section class="motivation" aria-live="polite">
+        <span aria-hidden="true">🌈</span>
+        <p id="motivationText">Du musst nicht alles sofort können. Üben ist ein super Anfang!</p>
+        <button id="newMotivation" type="button">Neuer Mutmacher</button>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
